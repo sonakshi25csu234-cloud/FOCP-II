@@ -1,17 +1,24 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main(){
-    int empno,sal;
-    cout<<"Enter the number of employees";
-    cin>>empno;
-    cout<<"Enter the basic salary of each employee";
-    cin>>sal;
-    for(int i=0;i=empno;i++){
-        
 
+int main() {
+    int n;
+    float basicSalary, bonus, netSalary;
 
+    cout << "Enter number of employees: ";
+    cin >> n;
+
+    for (int i = 1; i <= n; i++) {
+        cout << "\nEnter basic salary of employee " << i << ": ";
+        cin >> basicSalary;
+
+        bonus = 0.12 * basicSalary;
+        netSalary = basicSalary + bonus;
+
+        cout << "Basic Salary: " << basicSalary << endl;
+        cout << "Bonus (12%): " << bonus << endl;
+        cout << "Net Salary: " << netSalary << endl;
     }
 
-
-
+    return 0;
 }
